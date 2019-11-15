@@ -96,7 +96,7 @@ def write_space_objects_data_to_file(output_filename, space_objects):
     """
     with open(output_filename, 'w') as out_file:
         for obj in space_objects:
-            print(out_file, "Star %d %s %f %f %f %f %f" % (obj.R, obj.color, obj.m, obj.x, obj.y, obj.Vx, obj.Vy))
+            out_file.writelines("Star %d %s %f %f %f %f %f \n" % (obj.R, obj.color, obj.m, obj.x, obj.y, obj.Vx, obj.Vy))
 
 
 if __name__ == "__main__":
